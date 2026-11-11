@@ -1,18 +1,21 @@
 
 ```mermaid
 erDiagram
-    TRABAJO {        
+    REVISION {        
        int id PK        
-       string descripcion       
-       int anio        
-       int autor_id FK    
+       string descripcion
+       int horas       
     }
- 
-    AUTOR{
-        int id 
-        string nombre
+    PINTURA {        
+       int id PK        
+       string descripcion
+       int horas
+       int material      
     }
- 
-      TRABAJO ||--o{AUTOR : escribe2
- 
+    MECANICA {        
+       int id PK        
+       string descripcion
+       int horas
+       int material
+    } 
 ```
