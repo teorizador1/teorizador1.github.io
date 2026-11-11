@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi perfil personal</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f5f9;
+    color: #263248;
+}
+
+header {
+    background: #14243d;
+    color: white;
+    padding: 25px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h2 {
+    letter-spacing: 1px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.hero {
+    background: linear-gradient(120deg,#19385f,#3978a9);
+    color: white;
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.profile {
+    width: 145px;
+    height: 145px;
+    border-radius: 50%;
+    border: 5px solid white;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 17px;
+    opacity: .9;
+}
+
+.container {
+    max-width: 1050px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 14px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 18px #00000009;
+}
+
+h2 {
+    color: #19385f;
+    margin-bottom: 18px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+video {
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 10px;
+}
+
+.skills span {
+    display: inline-block;
+    background: #e6eef8;
+    color: #24517d;
+    padding: 10px 16px;
+    border-radius: 20px;
+    margin: 5px;
+}
+
+.social a {
+    display: inline-block;
+    color: #28649b;
+    text-decoration: none;
+    margin: 8px 15px 0 0;
+    font-weight: bold;
+}
+
+footer {
+    background: #14243d;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+}
+
+@media(max-width:650px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0 7px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2>MI PORTFOLIO</h2>
+    <nav>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#galeria">Galería</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <img class="profile"
+    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300"
+    alt="Foto de perfil">
+
+    <h1>Tu Nombre</h1>
+    <p>Estudiante · Creativo · Apasionado por la tecnología</p>
+</section>
+
+<main class="container">
+
+    <section class="card" id="sobre-mi">
+        <h2>Sobre mí</h2>
+        <p>
+            ¡Hola! Soy una persona creativa, responsable y con ganas
+            de aprender cosas nuevas. Me gusta descubrir nuevas
+            tecnologías, trabajar en equipo y desarrollar proyectos.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>Mis habilidades</h2>
+        <div class="skills">
+            <span>Creatividad</span>
+            <span>Trabajo en equipo</span>
+            <span>HTML y CSS</span>
+            <span>Comunicación</span>
+            <span>Organización</span>
+        </div>
+    </section>
+
+    <section class="card" id="galeria">
+        <h2>Mi galería</h2>
+        <div class="gallery">
+            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=600" alt="Espacio de trabajo">
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600" alt="Tecnología">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600" alt="Ordenador">
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>Mi vídeo</h2>
+        <p>Un vídeo para presentarme o mostrar mis proyectos.</p>
+
+        <video controls poster="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900">
+            <source src="mi-video.mp4" type="video/mp4">
+            Tu navegador no soporta vídeos.
+        </video>
+        <small>Coloca tu vídeo en la misma carpeta con el nombre mi-video.mp4.</small>
+    </section>
+
+    <section class="card" id="contacto">
+        <h2>Contacto</h2>
+        <p>¡Puedes encontrarme en mis redes sociales!</p>
+
+        <div class="social">
+            <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+            <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+            <a href="mailto:tuemail@ejemplo.com">Email</a>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Mi perfil personal · Todos los derechos reservados</p>
+</footer>
+
+</body>
+</html>
